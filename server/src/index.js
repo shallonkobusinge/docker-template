@@ -26,7 +26,8 @@ app.get('/api', (req, res) => {
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function (request, response) {
-    response.sendFile(path.join(CLIENT_BUILD_PATH, 'index.html'));
+    // response.sendFile(path.join(CLIENT_BUILD_PATH, 'index.html'));
+    response.json("Hello there")
 });
 
 app.listen(PORT, HOST);
